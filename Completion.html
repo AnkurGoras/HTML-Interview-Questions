@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Congratulations</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            animation: zoomIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #ffcc00;
+            }
+            to {
+                text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff9900;
+            }
+        }
+
+        /* Confetti dots */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffcc00;
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+        }
+
+        .confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .confetti:nth-child(2) { left: 30%; animation-delay: 1s; background: #00eaff; }
+        .confetti:nth-child(3) { left: 50%; animation-delay: 2s; background: #ff6b6b; }
+        .confetti:nth-child(4) { left: 70%; animation-delay: 3s; background: #7bed9f; }
+        .confetti:nth-child(5) { left: 90%; animation-delay: 4s; background: #ffa502; }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 110%;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎉 Congratulations! 🎉</h1>
+        <p>You have successfully completed your journey.</p>
+    </div>
+
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+</body>
+</html>

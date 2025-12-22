@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Method Form</title>
+</head>
+<body>
+    <h2>Submit Data via GET Method (Data will appear in the URL)</h2>
+
+    <!-- The 'method="get"' attribute is essential for putting data in the URL -->
+    <form action="Completion.html" method="get">
+        <label for="username">Username:</label>
+        <!-- The 'name' attribute determines the key in the URL parameter -->
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
